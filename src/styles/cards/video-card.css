@@ -1,0 +1,40 @@
+.video-card-body{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    gap:14px;
+    padding:20px;
+}
+
+.video-card-body h3{
+    font-size:22px;
+    line-height:1.35;
+}
+
+.video-description{
+    color:var(--text-secondary);
+    line-height:1.7;
+    flex:1;
+}
+
+.video-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-weight:600;
+    margin-top:auto;
+    transition:.3s;
+}
+
+.video-link:hover{
+    gap:14px;
+}
+
+.arrow{
+    transition:.3s;
+}
+
+.video-link:hover .arrow{
+    transform:translateX(6px);
+}

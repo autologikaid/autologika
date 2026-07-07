@@ -1,0 +1,42 @@
+---
+import "../../styles/ui/thumbnail.css";
+
+const {
+    image = "",
+    alt = "",
+    duration = "",
+    href = "#",
+} = Astro.props;
+---
+
+<a href={href} class="thumbnail">
+
+    <img
+        src={image}
+        alt={alt}
+        loading="lazy"
+    />
+
+    <div class="thumbnail-gradient"></div>
+
+    <div class="thumbnail-overlay">
+
+        <div class="play-button">
+            ▶
+        </div>
+
+    </div>
+
+    {
+        duration && (
+
+            <span class="thumbnail-duration">
+
+                {duration}
+
+            </span>
+
+        )
+    }
+
+</a>

@@ -1,0 +1,29 @@
+.diagram-viewer{
+
+    max-width:1000px;
+
+    margin:20px auto 70px;
+
+}
+
+.diagram-viewer img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    cursor:zoom-in;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    transition:.35s;
+
+}
+
+.diagram-viewer img:hover{
+
+    transform:translateY(-4px);
+
+}

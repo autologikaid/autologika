@@ -1,0 +1,67 @@
+---
+import "../styles/pages/diagram.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/sections/Navbar.astro";
+import SectionTitle from "../components/ui/SectionTitle.astro";
+import DiagramCard from "../components/cards/DiagramCard.astro";
+
+import { diagrams } from "../data/diagrams";
+---
+
+<BaseLayout title="Diagram | AutoLogika">
+
+    <Navbar />
+
+    <section class="section">
+
+    <div class="container">
+
+        <div class="page-header">
+
+            <span class="page-label">
+
+                📚 Seri Diagram AutoLogika
+
+            </span>
+
+            <h1>
+
+                Belajar Otomotif Melalui Infografis
+
+            </h1>
+
+            <p>
+
+                Kumpulan infografis AutoLogika yang disusun secara berurutan,
+                mulai dari konsep dasar hingga sistem kendaraan modern.
+                Pelajari satu per satu seperti membaca sebuah buku.
+
+            </p>
+
+        </div>
+
+        <div class="diagram-grid">
+
+            {
+                diagrams
+                    .filter(diagram => diagram.status === "published")
+                    .map(diagram => (
+
+                        <DiagramCard
+
+                            {...diagram}
+
+                            href={`/diagram/${diagram.slug}`}
+
+                        />
+
+                    ))
+            }
+
+        </div>
+
+    </div>
+
+</section>
+
+</BaseLayout>

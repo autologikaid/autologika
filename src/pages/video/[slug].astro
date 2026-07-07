@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/sections/Navbar.astro";
+import ContentHeader from "../../components/content/ContentHeader.astro";
+import VideoPlayer from "../../components/content/VideoPlayer.astro";
+import VideoBody from "../../components/content/VideoBody.astro";
+import RelatedVideos from "../../components/content/RelatedVideos.astro";
+import { videos } from "../../data/videos";
+
+export function getStaticPaths() {
+
+    return videos.map((video) => ({
+
+        params: {
+
+            slug: video.slug,
+
+        },
+
+        props: {
+
+            video,
+
+        },
+
+    }));
+
+}
+
+const { video } = Astro.props;
+---
+
+<BaseLayout title={video.title}>
+
+    <Navbar />
+
+    <section class="section">
+
+        <div class="container">
+
+            <ContentHeader content={video} />
+
+            <VideoPlayer content={video} />
+
+            <VideoBody content={video} />
+
+            <RelatedVideos
+            currentSlug={video.slug}
+            videos={videos}
+            />
+
+        </div>
+
+    </section>
+
+</BaseLayout>

@@ -1,0 +1,102 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    background:var(--surface);
+
+    border-bottom:1px solid var(--surface-light);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+}
+
+.nav-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:72px;
+}
+
+.logo-image{
+
+    height:52px;
+
+    width:auto;
+
+    display:block;
+
+    transition:.3s;
+
+}
+
+.logo-image:hover{
+
+    transform:scale(1.03);
+
+}
+
+.logo{
+
+    font-family:"Space Grotesk", sans-serif;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    letter-spacing:-0.03em;
+
+    display:flex;
+
+    align-items:flex-start;
+
+}
+
+.logo-red{
+
+    color:var(--primary);
+
+}
+
+.logo-id{
+
+    color:var(--text-secondary);
+
+    font-size:.65em;
+
+    font-weight:600;
+
+    margin-left:2px;
+
+    letter-spacing:1px;
+
+    align-self:flex-start;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:32px;
+}
+
+.nav-menu a{
+
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+
+    color:var(--primary-hover);
+}
