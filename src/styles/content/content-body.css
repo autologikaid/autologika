@@ -2,15 +2,15 @@
 
     max-width:900px;
 
-    margin:70px auto;
+    margin:10px auto;
 
 }
 
 .content-body h2{
 
-    font-size:2rem;
+    font-size:1.3rem;
 
-    margin-bottom:24px;
+    margin-bottom:10px;
 
 }
 
@@ -20,6 +20,6 @@
 
     line-height:2;
 
-    font-size:1.08rem;
+    font-size:1.05rem;
 
 }

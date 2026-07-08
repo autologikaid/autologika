@@ -1,40 +1,50 @@
-/* ===========================
-   NAVBAR
-=========================== */
+/* =========================
+   NAVBAR V2
+========================= */
 
 .navbar{
 
-    background:var(--surface);
-
-    border-bottom:1px solid var(--surface-light);
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
+
+    backdrop-filter:blur(14px);
+
+    background:rgba(15,17,21,.72);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+}
+
+.navbar.scrolled{
+
+    background:rgba(15,17,21,.92);
+
+    box-shadow:0 12px 40px rgba(0,0,0,.28);
+
 }
 
 .nav-container{
 
-    display:flex;
+    height:76px;
 
-    justify-content:space-between;
+    display:flex;
 
     align-items:center;
 
-    height:72px;
+    justify-content:space-between;
+
 }
 
 .logo-image{
 
     height:52px;
 
-    width:auto;
-
     display:block;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
@@ -44,41 +54,9 @@
 
 }
 
-.logo{
-
-    font-family:"Space Grotesk", sans-serif;
-
-    font-size:2rem;
-
-    font-weight:800;
-
-    letter-spacing:-0.03em;
+nav{
 
     display:flex;
-
-    align-items:flex-start;
-
-}
-
-.logo-red{
-
-    color:var(--primary);
-
-}
-
-.logo-id{
-
-    color:var(--text-secondary);
-
-    font-size:.65em;
-
-    font-weight:600;
-
-    margin-left:2px;
-
-    letter-spacing:1px;
-
-    align-self:flex-start;
 
 }
 
@@ -86,17 +64,128 @@
 
     display:flex;
 
+    gap:34px;
+
     list-style:none;
 
-    gap:32px;
+    align-items:center;
+
 }
 
 .nav-menu a{
 
+    color:var(--text-secondary);
+
+    text-decoration:none;
+
+    font-weight:500;
+
     transition:.25s;
+
 }
 
 .nav-menu a:hover{
 
-    color:var(--primary-hover);
+    color:var(--primary);
+
+}
+
+.nav-menu a.active{
+
+    color:var(--primary);
+
+}
+
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+.menu-button{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:var(--text);
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:900px){
+
+.menu-button{
+
+    display:block;
+
+}
+
+nav{
+
+    position:absolute;
+
+    top:76px;
+
+    left:0;
+
+    width:100%;
+
+    overflow:hidden;
+
+    max-height:0;
+
+    background:rgba(15,17,21,.97);
+
+    transition:max-height .35s ease;
+
+}
+
+nav.open{
+
+    max-height:500px;
+
+}
+
+.nav-menu{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:0;
+
+    padding:18px 0;
+
+}
+
+.nav-menu li{
+
+    width:100%;
+
+}
+
+.nav-menu a{
+
+    display:block;
+
+    width:100%;
+
+    padding:18px 30px;
+
+}
+
+.nav-menu a:hover{
+
+    background:rgba(255,255,255,.04);
+
+}
+
 }

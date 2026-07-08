@@ -1,40 +1,111 @@
 ---
 import "../../styles/navbar.css";
+
+const currentPath = Astro.url.pathname;
+
+const menus = [
+  { name: "Home", href: "/" },
+  { name: "Artikel", href: "/article" },
+  { name: "Video", href: "/video" },
+  { name: "Infografis", href: "/diagram" },
+  { name: "Tentang", href: "/about" },
+  { name: "Kontak", href: "/kontak" },
+];
 ---
-<header class="navbar">
 
-    <div class="container nav-container">
+<header class="navbar" id="navbar">
 
-        <a href="/" class="logo">
+  <div class="container nav-container">
 
-            <img
+    <a href="/" class="logo">
+      <img
         src="/logo.webp"
         alt="AUTOLOGIKA.ID"
         class="logo-image"
-    />
+      />
+    </a>
 
-        </a>
+    <button
+      id="menu-button"
+      class="menu-button"
+      aria-label="Toggle Navigation">
 
-        <nav>
+      ☰
 
-            <ul class="nav-menu">
+    </button>
 
-                <li><a href="/">Home</a></li>
+    <nav id="mobile-nav">
 
-                <li><a href="/article">Artikel</a></li>
+      <ul class="nav-menu">
 
-                <li><a href="/video">Video</a></li>
+        {
+          menus.map((item) => (
 
-                <li><a href="/diagram">Infografis</a></li>
+            <li>
 
-                <li><a href="/about">Tentang</a></li>
+              <a
+                href={item.href}
+                class={currentPath === item.href ? "active" : ""}>
 
-                <li><a href="/kontak">Kontak</a></li>
+                {item.name}
 
-            </ul>
+              </a>
 
-        </nav>
+            </li>
 
-    </div>
+          ))
+        }
+
+      </ul>
+
+    </nav>
+
+  </div>
 
 </header>
+
+<script is:inline>
+
+const button = document.querySelector("#menu-button");
+const nav = document.querySelector("#mobile-nav");
+
+button?.addEventListener("click",()=>{
+
+    nav?.classList.toggle("open");
+
+    button.textContent =
+        nav?.classList.contains("open")
+        ? "✕"
+        : "☰";
+
+});
+
+window.addEventListener("scroll",()=>{
+
+    const navbar=document.querySelector("#navbar");
+
+    if(window.scrollY>30){
+
+        navbar?.classList.add("scrolled");
+
+    }else{
+
+        navbar?.classList.remove("scrolled");
+
+    }
+
+});
+
+document.querySelectorAll(".nav-menu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        nav?.classList.remove("open");
+
+        button.textContent="☰";
+
+    });
+
+});
+
+</script>

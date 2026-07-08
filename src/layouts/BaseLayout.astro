@@ -3,6 +3,7 @@ const { title = "AutoLogika | Belajar Otomotif Modern" } = Astro.props;
 import "../styles/base/global.css";
 import "../styles/base/background.css";
 import "../styles/base/layout.css";
+import Footer from "../components/sections/Footer.astro";
 ---
 
 <!DOCTYPE html>
@@ -18,6 +19,11 @@ import "../styles/base/layout.css";
     <meta
         name="description"
         content="Belajar otomotif modern melalui artikel, video, dan infografis yang mudah dipahami."
+    />
+    <link
+    rel="icon"
+    type="image/webp"
+    href="/favicon.webp"
     />
 </head>
 
@@ -40,6 +46,8 @@ import "../styles/base/layout.css";
         <slot />
 
     </main>
+
+    <Footer />
 
 </body>
 
