@@ -1,0 +1,49 @@
+---
+import "../../styles/content/content-header.css";
+
+const { content } = Astro.props;
+---
+
+<header class="content-header">
+
+    <div class="content-meta">
+
+        <span class="badge">
+            {content.category}
+        </span>
+
+        <span class="badge">
+            {content.level}
+        </span>
+
+    </div>
+
+    <h1>
+
+        {content.title}
+
+    </h1>
+
+    <div class="content-info">
+
+        <span>
+
+            📅 {content.publishedAt}
+
+        </span>
+
+        <span>
+
+            ⏱ {content.duration}
+
+        </span>
+
+    </div>
+
+    <p class="content-description">
+
+        {content.excerpt}
+
+    </p>
+
+</header>

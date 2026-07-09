@@ -1,0 +1,63 @@
+.content-header{
+
+    max-width:1000px;
+
+    margin:5px auto 30px;
+
+}
+
+.content-meta{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-bottom:24px;
+
+}
+
+.badge{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--text);
+
+    font-size:.9rem;
+
+}
+
+.content-header h1{
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+.content-info{
+
+    display:flex;
+
+    gap:24px;
+
+    color:var(--text-secondary);
+
+    margin-bottom:15px;
+
+}
+
+.content-description{
+
+    color:var(--text-secondary);
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+    max-width:850px;
+
+}

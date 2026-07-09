@@ -1,0 +1,196 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    background:var(--surface);
+
+    border-bottom:1px solid var(--surface-light);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+}
+
+.nav-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:72px;
+}
+
+.logo-image{
+
+    height:52px;
+
+    width:auto;
+
+    display:block;
+
+    transition:.3s;
+
+}
+
+.logo-image:hover{
+
+    transform:scale(1.03);
+
+}
+
+.logo{
+
+    font-family:"Space Grotesk", sans-serif;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    letter-spacing:-0.03em;
+
+    display:flex;
+
+    align-items:flex-start;
+
+}
+
+.logo-red{
+
+    color:var(--primary);
+
+}
+
+.logo-id{
+
+    color:var(--text-secondary);
+
+    font-size:.65em;
+
+    font-weight:600;
+
+    margin-left:2px;
+
+    letter-spacing:1px;
+
+    align-self:flex-start;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:32px;
+}
+
+.nav-menu a{
+
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+
+    color:var(--primary-hover);
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:var(--text);
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+@media (max-width:900px){
+
+.nav-container{
+
+    height:72px;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+nav{
+
+    position:absolute;
+
+    top:72px;
+
+    left:0;
+
+    width:100%;
+
+    background:var(--surface);
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+    border-bottom:1px solid var(--surface-light);
+
+}
+
+nav.show{
+
+    max-height:500px;
+
+}
+
+.nav-menu{
+
+    flex-direction:column;
+
+    gap:0;
+
+    padding:18px 0;
+
+}
+
+.nav-menu li{
+
+    width:100%;
+
+}
+
+.nav-menu a{
+
+    display:block;
+
+    padding:16px 28px;
+
+}
+
+.nav-menu a:hover{
+
+    background:var(--surface-light);
+
+}
+
+}

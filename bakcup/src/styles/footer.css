@@ -233,34 +233,8 @@
 .footer-grid{
 
     grid-template-columns:1fr;
-    text-align:center;
+
     gap:40px;
-
-}
-
-.footer-grid > div{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-.footer ul{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-.footer li{
-
-    margin-bottom:12px;
 
 }
 

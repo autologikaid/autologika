@@ -1,0 +1,23 @@
+---
+import "../../styles/ui/page-header.css";
+
+interface Props {
+  badge: string;
+  title: string;
+  description: string;
+}
+
+const { badge, title, description } = Astro.props;
+---
+
+<section class="page-header">
+
+  <div class="page-header-badge">
+    {badge}
+  </div>
+
+  <h1>{title}</h1>
+
+  <p>{description}</p>
+
+</section>

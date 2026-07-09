@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/sections/Navbar.astro";
+import ContentHeader from "../../components/content/ContentHeader.astro";
+import DiagramBody from "../../components/content/DiagramBody.astro";
+import DiagramViewer from "../../components/content/DiagramViewer.astro";
+import { diagrams } from "../../data/diagrams";
+
+
+export function getStaticPaths() {
+
+    return diagrams.map((diagram) => ({
+
+        params: {
+
+            slug: diagram.slug,
+
+        },
+
+        props: {
+
+            diagram,
+
+        },
+
+    }));
+
+}
+
+const { diagram } = Astro.props;
+---
+
+<BaseLayout title={diagram.title}>
+
+    <Navbar />
+
+    <section class="section">
+
+        <div class="container">
+
+            <ContentHeader content={diagram} />
+
+            <DiagramViewer content={diagram} />
+
+            <DiagramBody content={diagram} />
+
+        </div>
+
+    </section>
+
+</BaseLayout>

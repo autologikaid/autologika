@@ -28,11 +28,12 @@ const url = slug ? `/video/${slug}` : href;
 
     <div class="video-card-body">
 
-        <h3>{title}</h3>
-        
-        <Badge size="sm" variant="secondary">
-            🏷 {category}
+        <Badge>
+            {category}
         </Badge>
+
+        <h3>{title}</h3>
+
         <p class="video-description">
             {description}
         </p>

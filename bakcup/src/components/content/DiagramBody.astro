@@ -1,0 +1,39 @@
+---
+const { content } = Astro.props;
+---
+
+<section class="content-body">
+
+    <h2>Tentang Diagram</h2>
+
+    <p>{content.description}</p>
+
+</section>
+
+<style>
+
+.content-body{
+
+    max-width:1000px;
+
+    margin:70px auto;
+
+}
+
+.content-body h2{
+
+    font-size:2rem;
+
+    margin-bottom:24px;
+
+}
+
+.content-body p{
+
+    line-height:1.9;
+
+    color:var(--text-secondary);
+
+}
+
+</style>

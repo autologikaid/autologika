@@ -1,0 +1,25 @@
+.content-body{
+
+    max-width:900px;
+
+    margin:10px auto;
+
+}
+
+.content-body h2{
+
+    font-size:1.3rem;
+
+    margin-bottom:10px;
+
+}
+
+.content-body p{
+
+    color:var(--text-secondary);
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
