@@ -1,11 +1,11 @@
 ---
 import "../../styles/sections/featured-video.css";
-
 import SectionTitle from "../ui/SectionTitle.astro";
-
 import VideoCard from "../cards/VideoCard.astro";
-
 import { videos } from "../../data/videos";
+const featuredVideos = [...videos]
+    .reverse()
+    .slice(0,3);
 
 ---
 
@@ -21,7 +21,7 @@ import { videos } from "../../data/videos";
         <div class="video-grid">
 
             {
-                videos.map(video => (
+                featuredVideos.map(video => (
                     <VideoCard {...video} />
                 ))
             }
