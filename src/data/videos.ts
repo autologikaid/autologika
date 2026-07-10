@@ -28,7 +28,6 @@ featured:true,
 status:"published",
 
 publishedAt:"2026-06-22",
-
 },
 
 {
@@ -57,7 +56,6 @@ featured:true,
 status:"published",
 
 publishedAt:"2026-06-23",
-
 },
 
 {
@@ -86,7 +84,90 @@ featured:true,
 status:"published",
 
 publishedAt:"2026-06-24",
+},
 
+{
+id:4,
+
+title:"Sensor IAT",
+
+slug:"sensor-iat",
+
+excerpt:"Penyebab Mobil Loyo Ternyata Bisa dari Sensor Ini",
+
+description:"Banyak orang mengira sensor IAT hanyalah sensor biasa. Padahal, data dari sensor ini digunakan ECU untuk menghitung campuran udara dan bahan bakar agar pembakaran tetap optimal.",
+
+category:"Sensor",
+
+level:"pemula",
+
+duration:"01:03",
+
+videoUrl:"https://www.youtube.com/embed/nAjR57QJiZc",
+
+image:"/images/videos/thumbnails/004-sensor-iat.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-06-26",
+},
+
+{
+id:5,
+
+title:"ECU Salah Baca Data",
+
+slug:"ecu-salah-baca-data",
+
+excerpt:"ECU Dibohongi! Ini yang Terjadi Kalau Menerima Data yang Salah! 😱",
+
+description:"ECU mengatur kerja mesin berdasarkan data dari berbagai sensor. Jika salah satu sensor mengirimkan data yang keliru, ECU juga bisa mengambil keputusan yang tidak tepat.",
+
+category:"ECU",
+
+level:"pemula",
+
+duration:"01:09",
+
+videoUrl:"https://www.youtube.com/embed/zU76TIJkANM",
+
+image:"/images/videos/thumbnails/005-ecu-salah-data.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-06-27",
+},
+
+{
+id:6,
+
+title:"Throttle Body Kotor",
+
+slug:"throttle-body-kotor",
+
+excerpt:"Kenapa Throttle Body Kotor Membuat Idle Tidak Stabil? Ini Penjelasan Ilmiahnya!",
+
+description:"🚗 RPM mobil naik turun saat langsam? Mesin terasa bergetar ketika berhenti di lampu merah? salah satu penyebab yang sering terlewat adalah throttle body yang kotor.",
+
+category:"Air Intake",
+
+level:"pemula",
+
+duration:"01:23",
+
+videoUrl:"https://www.youtube.com/embed/QvckOuOFCPY",
+
+image:"/images/videos/thumbnails/006-throttle-body-kotor.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-07-01",
 },
 
 ];
