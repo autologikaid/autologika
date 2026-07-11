@@ -35,7 +35,7 @@ id:2,
 
 title:"Pemilihan Oli",
 
-slug:"Engine",
+slug:"pemilihan-oli",
 
 excerpt:"Apakah Oli Mahal Selalu Lebih Bagus? Ini Faktanya!",
 
