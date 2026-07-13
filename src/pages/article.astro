@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/ui/PageHeader.astro";
 import Navbar from "../components/sections/Navbar.astro";
 import { articles } from "../data/articles";
 ---
@@ -12,18 +13,12 @@ import { articles } from "../data/articles";
 
 <div class="container">
 
-<h1 class="page-title">
+    <PageHeader
+            badge="📚 Artikel AutoLogika.id"
+            title="Belajar Otomotif Melalui Artikel"
+            description="Kumpulan artikel otomotif yang disusun secara sistematis, mudah dipahami, dan saling terhubung mulai dari dasar hingga tingkat lanjutan."
+            />
 
-📚 Artikel AutoLogika
-
-</h1>
-
-<p class="page-description">
-
-Kumpulan artikel otomotif yang disusun secara sistematis, mudah dipahami,
-dan saling terhubung mulai dari dasar hingga tingkat lanjutan.
-
-</p>
 
 <div class="article-grid">
 

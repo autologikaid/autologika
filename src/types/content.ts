@@ -58,9 +58,4 @@ export interface Article extends BaseContent {
 
     relatedDiagrams?:string[];
 
-    tableOfContents:{
-        id:string;
-        title:string;
-    }[];
-
 }

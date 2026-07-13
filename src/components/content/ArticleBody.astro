@@ -11,9 +11,20 @@ const { content } = Astro.props;
 <div class="article-card">
 
     <article class="article-body">
+        
+        <div class="article-hero">
+            <div class="article-hero-label">
+                AUTOLOGIKA.ID ARTICLE
+            </div>
+            <img
+            class="article-cover"
+            src={content.image}
+            alt={content.title}
+            />
+        </div>
 
         <Fragment set:html={content.body} />
-
+    
     </article>
 
 </div>
@@ -26,9 +37,9 @@ const { content } = Astro.props;
 
     color:#111;
 
-    border-radius:24px;
+    border-radius:40px;
 
-    padding:24px;
+    padding:40px;
 
     margin-top:20px;
 
@@ -36,9 +47,59 @@ const { content } = Astro.props;
 
 }
 
+.article-hero{
+
+    position:relative;
+
+    background:linear-gradient(
+        180deg,
+        #fafafa,
+        #f3f4f6
+    );
+
+    border:1px solid rgba(193,18,31,.15);
+
+    border-radius:26px;
+
+    padding:32px;
+
+    margin:10px auto 50px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.10),
+        0 0 30px rgba(193,18,31,.05);
+
+}
+
+.article-hero-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:8px 16px;
+
+    margin-bottom:24px;
+
+    border-radius:999px;
+
+    background:rgba(193,18,31,.08);
+
+    color:var(--primary);
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+}
+
 .article-body{
 
-    max-width:920px;
+    max-width:800px;
 
     margin:auto;
 
@@ -86,7 +147,7 @@ color:#777;
 
 }
 
-.article-body img{
+.article-body figure img{
 
     display:block;
 
@@ -94,7 +155,7 @@ color:#777;
 
     width:100%;
 
-    margin:15px auto;
+    margin:20px auto;
 
     border-radius:16px;
 
@@ -104,7 +165,21 @@ color:#777;
 
 }
 
-.article-body img:hover{
+.article-cover{
+
+    display:block;
+
+    width:70%;
+
+    max-width:640px;
+
+    margin:auto;
+
+    border-radius:18px;
+
+}
+
+.article-body figure img:hover{
 
     transform:scale(1.03);
 
@@ -114,7 +189,25 @@ color:#777;
 
 .article-card{
 
-padding:28px;
+    padding:28px;
+
+}
+
+.article-hero{
+
+    padding:20px;
+
+}
+
+.article-cover{
+
+    width:100%;
+
+}
+
+.article-hero-label{
+
+    font-size:.68rem;
 
 }
 
