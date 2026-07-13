@@ -1,0 +1,85 @@
+---
+interface Item{
+    label:string;
+    href?:string;
+}
+
+interface Props{
+    items:Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="breadcrumb">
+
+    {items.map((item,index)=>(
+        <>
+            {
+            item.href ? (
+            <a href={item.href}>
+            {item.label}
+            </a>
+            ) : (
+            <strong>
+            {item.label}
+            </strong>
+        )
+        }
+
+            {
+                index < items.length-1 &&
+                <span>›</span>
+            }
+        </>
+    ))}
+
+</nav>
+
+<style>
+
+.breadcrumb{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+align-items:center;
+
+margin-bottom:28px;
+
+font-size:.92rem;
+
+}
+
+.breadcrumb a{
+
+color:#c8c8c8;
+
+text-decoration:none;
+
+}
+
+.breadcrumb a:hover{
+
+color:white;
+
+}
+
+.breadcrumb span{
+
+color:#666;
+
+}
+
+.breadcrumb strong{
+
+color:white;
+
+font-weight:600;
+
+}
+
+</style>

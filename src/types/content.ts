@@ -42,6 +42,25 @@ export interface Diagram extends BaseContent{
 
 export interface Article extends BaseContent {
 
-    readingTime:string;
+    author:string;
+
+    tags:string[];
+
+    body:string;
+
+    thumbnail:string;
+
+    seoTitle?:string;
+
+    seoDescription?:string;
+
+    keywords?:string[];
+
+    relatedDiagrams?:string[];
+
+    tableOfContents:{
+        id:string;
+        title:string;
+    }[];
 
 }

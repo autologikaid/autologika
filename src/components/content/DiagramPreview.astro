@@ -1,0 +1,125 @@
+---
+import { diagrams } from "../../data/diagrams";
+
+interface Props {
+    slugs: string[];
+}
+
+const { slugs } = Astro.props;
+
+const related = diagrams.filter(diagram =>
+    slugs.includes(diagram.slug)
+);
+---
+
+<section class="related-diagrams">
+
+    <h2>📊 Diagram Pendukung</h2>
+
+    <div class="diagram-grid">
+
+        {related.map((diagram) => (
+
+            <a
+                href={`/diagram/${diagram.slug}`}
+                class="diagram-card"
+            >
+
+                <img
+                    src={diagram.thumbnail}
+                    alt={diagram.title}
+                />
+
+                <h3>{diagram.title}</h3>
+
+                <p>{diagram.excerpt}</p>
+
+                <span>Lihat Diagram →</span>
+
+            </a>
+
+        ))}
+
+    </div>
+
+</section>
+
+<style>
+
+.related-diagrams{
+
+    margin-top:70px;
+
+}
+
+.related-diagrams h2{
+
+    color:#fff;
+
+    margin-bottom:24px;
+
+}
+
+.diagram-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:24px;
+
+}
+
+.diagram-card{
+
+max-width:520px;
+
+margin:0 auto;
+
+text-align:center;
+
+}
+
+.diagram-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.diagram-card img{
+
+display:block;
+
+width:100%;
+
+max-width:320px;
+
+margin:0 auto 20px;
+
+}
+
+.diagram-card h3{
+
+    margin:0 0 6px;
+
+}
+
+.diagram-card p{
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+    line-height:1.6;
+
+}
+
+.diagram-card span{
+
+display:inline-block;
+
+margin-top:1px;
+
+}
+
+</style>

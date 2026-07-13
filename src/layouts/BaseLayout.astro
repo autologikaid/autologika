@@ -1,9 +1,18 @@
 ---
-const { title = "AutoLogika | Belajar Otomotif Modern" } = Astro.props;
 import "../styles/base/global.css";
 import "../styles/base/background.css";
 import "../styles/base/layout.css";
 import Footer from "../components/sections/Footer.astro";
+
+const {
+
+title = "AutoLogika | Belajar Otomotif Modern",
+
+description = "Belajar otomotif modern melalui artikel, video, dan infografis yang mudah dipahami.",
+
+image = "/og-image.webp",
+
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -18,9 +27,18 @@ import Footer from "../components/sections/Footer.astro";
     <title>{title}</title>
 
     <meta
-        name="description"
-        content="Belajar otomotif modern melalui artikel, video, dan infografis yang mudah dipahami."
+    name="description"
+    content={description}
     />
+
+    <meta property="og:title" content={title} />
+    
+    <meta property="og:description" content={description} />
+    
+    <meta property="og:image" content={image} />
+    
+    <meta property="og:type" content="article" />
+
     <link
     rel="icon"
     type="image/webp"

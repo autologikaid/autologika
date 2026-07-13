@@ -1,0 +1,136 @@
+---
+interface Props {
+
+    type: "fact" | "warning" | "tip";
+
+    title?: string;
+
+}
+
+const { type, title } = Astro.props;
+
+const config = {
+
+    fact: {
+
+        icon: "🔍",
+
+        title: title ?? "Tahukah Anda?",
+
+        color: "#2563eb",
+
+        background: "#eff6ff",
+
+        border: "#93c5fd",
+
+    },
+
+    warning: {
+
+        icon: "⚠",
+
+        title: title ?? "Kesalahan yang Sering Terjadi",
+
+        color: "#d97706",
+
+        background: "#fffbeb",
+
+        border: "#fcd34d",
+
+    },
+
+    tip: {
+
+        icon: "✅",
+
+        title: title ?? "Tips AutoLogika",
+
+        color: "#15803d",
+
+        background: "#f0fdf4",
+
+        border: "#86efac",
+
+    }
+
+}[type];
+---
+
+<div
+class="knowledge-box"
+style={`
+
+--box-bg:${config.background};
+
+--box-color:${config.color};
+
+--box-border:${config.border};
+
+`}
+>
+
+<div class="knowledge-title">
+
+<span>
+
+{config.icon}
+
+</span>
+
+<strong>
+
+{config.title}
+
+</strong>
+
+</div>
+
+<div class="knowledge-content">
+
+<slot />
+
+</div>
+
+</div>
+
+<style>
+
+.knowledge-box{
+
+background:var(--box-bg);
+
+border-left:6px solid var(--box-border);
+
+padding:24px;
+
+border-radius:16px;
+
+margin:40px 0;
+
+}
+
+.knowledge-title{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:1.1rem;
+
+margin-bottom:16px;
+
+color:var(--box-color);
+
+}
+
+.knowledge-content{
+
+color:#333;
+
+line-height:1.9;
+
+}
+
+</style>

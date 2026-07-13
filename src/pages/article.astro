@@ -1,55 +1,233 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/sections/Navbar.astro";
-import "../styles/pages/article.css";
+import { articles } from "../data/articles";
 ---
 
 <BaseLayout title="Artikel | AutoLogika">
 
-    <Navbar />
+<Navbar />
 
-    <section class="construction">
+<section class="section">
 
-        <div class="construction-card">
+<div class="container">
 
-            <div class="construction-icon">
+<h1 class="page-title">
 
-                🚧
+📚 Artikel AutoLogika
 
-            </div>
+</h1>
 
-            <span class="construction-label">
+<p class="page-description">
 
-                Artikel AutoLogika
+Kumpulan artikel otomotif yang disusun secara sistematis, mudah dipahami,
+dan saling terhubung mulai dari dasar hingga tingkat lanjutan.
 
-            </span>
+</p>
 
-            <h1>
+<div class="article-grid">
 
-                Sedang Dalam Pengembangan
+{
+articles.map(article=>(
 
-            </h1>
+<a
+href={`/article/${article.slug}`}
+class="article-card">
 
-            <p>
+<img
+src={article.thumbnail}
+alt={article.title}
+/>
 
-                Kami sedang menyiapkan puluhan artikel otomotif yang disusun
-                secara sistematis agar mudah dipahami oleh semua kalangan.
+<div class="content">
 
-                <br /><br />
+<span class="category">
 
-                Sambil menunggu, silakan pelajari koleksi Video Edukasi dan
-                Diagram AutoLogika yang sudah tersedia.
+{article.category}
 
-            </p>
+</span>
 
-            <a href="/" class="back-home">
+<h2>
 
-                ← Kembali ke Beranda
+{article.title}
 
-            </a>
+</h2>
 
-        </div>
+<p>
 
-    </section>
+{article.excerpt}
+
+</p>
+
+<div class="meta">
+
+<span>
+
+📅 {article.publishedAt}
+
+</span>
+
+<span>
+
+🎯 {article.level}
+
+</span>
+
+</div>
+
+<div class="read-more">
+
+Baca Selengkapnya →
+
+</div>
+
+</div>
+
+</a>
+
+))
+}
+
+</div>
+
+</div>
+
+</section>
 
 </BaseLayout>
+
+<style>
+
+.page-title{
+
+font-size:2.6rem;
+
+margin-bottom:14px;
+
+}
+
+.page-description{
+
+color:#bbb;
+
+max-width:760px;
+
+margin-bottom:60px;
+
+}
+
+.article-grid{
+
+display:grid;
+
+gap:34px;
+
+}
+
+.article-card{
+
+display:grid;
+
+grid-template-columns:280px 1fr;
+
+gap:30px;
+
+background:white;
+
+border-radius:24px;
+
+padding:24px;
+
+text-decoration:none;
+
+color:#111;
+
+transition:.25s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+}
+
+.article-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.article-card img{
+
+width:100%;
+
+border-radius:16px;
+
+display:block;
+
+}
+
+.content h2{
+
+margin:10px 0;
+
+}
+
+.content p{
+
+color:#555;
+
+line-height:1.8;
+
+}
+
+.category{
+
+display:inline-block;
+
+padding:6px 12px;
+
+background:#ffe7e7;
+
+border-radius:999px;
+
+font-size:.85rem;
+
+color:#d00000;
+
+font-weight:700;
+
+}
+
+.meta{
+
+display:flex;
+
+gap:24px;
+
+margin-top:18px;
+
+color:#666;
+
+font-size:.9rem;
+
+}
+
+.read-more{
+
+margin-top:22px;
+
+font-weight:bold;
+
+color:#d00000;
+
+}
+
+@media(max-width:768px){
+
+.article-card{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>

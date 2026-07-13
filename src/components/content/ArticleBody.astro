@@ -1,0 +1,123 @@
+---
+import type { Article } from "../../types/content";
+
+interface Props {
+    content: Article;
+}
+
+const { content } = Astro.props;
+---
+
+<div class="article-card">
+
+    <article class="article-body">
+
+        <Fragment set:html={content.body} />
+
+    </article>
+
+</div>
+
+<style is:global>
+
+.article-card{
+
+    background:#ffffff;
+
+    color:#111;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    margin-top:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+}
+
+.article-body{
+
+    max-width:920px;
+
+    margin:auto;
+
+    line-height:1.6;
+
+    font-size:1rem;
+
+}
+
+.article-body figure{
+
+text-align:center;
+
+margin:10px auto;
+
+}
+
+.article-body figcaption{
+
+margin-top:12px;
+
+font-size:.7rem;
+
+color:#777;
+
+}
+
+.article-body h2{
+
+    color:#111;
+
+    margin-top:1rem;
+
+}
+
+.article-body p{
+
+    color:#444;
+
+    text-align: justify;
+
+    line-height:2;
+
+    margin-bottom:1.4rem;
+
+}
+
+.article-body img{
+
+    display:block;
+
+    max-width:260px;
+
+    width:100%;
+
+    margin:15px auto;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.article-body img:hover{
+
+    transform:scale(1.03);
+
+}
+
+@media(max-width:768px){
+
+.article-card{
+
+padding:28px;
+
+}
+
+}
+
+</style>

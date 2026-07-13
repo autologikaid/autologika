@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/sections/Navbar.astro";
+import ContentHeader from "../../components/content/ContentHeader.astro";
+import ArticleInfo from "../../components/content/ArticleInfo.astro";
+import ArticleBody from "../../components/content/ArticleBody.astro";
+import DiagramPreview from "../../components/content/DiagramPreview.astro";
+import ArticleFooter from "../../components/content/ArticleFooter.astro";
+import Breadcrumb from "../../components/common/Breadcrumb.astro";
+import KnowledgeBox from "../../components/article/KnowledgeBox.astro";
+import TableOfContents from "../../components/content/TableOfContents.astro";
+import { articles } from "../../data/articles";
+export function getStaticPaths() {
+
+    return articles.map((article) => ({
+
+        params: {
+
+            slug: article.slug,
+
+        },
+
+        props: {
+
+            article,
+
+        },
+
+    }));
+
+}
+
+const { article } = Astro.props;
+---
+
+<BaseLayout
+
+title={article.seoTitle ?? article.title}
+
+description={article.seoDescription}
+
+image={article.image}
+
+>
+
+    <Navbar />
+
+    <section class="section">
+
+        <div class="container">
+
+            <Breadcrumb
+            items={[
+                {
+                    label:"Home",
+                    href:"/"
+                },
+                {
+                    label:"Artikel",
+                    href:"/article"
+                },
+                {
+                    label:article.title,
+                    href:"#"
+                }
+]}
+/>
+
+            <ContentHeader content={article} />
+
+            <ArticleInfo content={article} />
+
+            <TableOfContents items={article.tableOfContents} />
+
+            <ArticleBody content={article} />
+
+            <KnowledgeBox type="fact">
+                
+                <p>
+                    Udara dingin memiliki massa jenis lebih tinggi dibanding udara panas. Oleh karena itu, mesin umumnya menghasilkan tenaga yang lebih baik ketika suhu udara masuk lebih rendah.
+                </p>
+            </KnowledgeBox>
+
+            {
+            article.relatedDiagrams && (
+            <DiagramPreview
+            slugs={article.relatedDiagrams}
+            />
+            )
+            }
+
+            <ArticleFooter />
+
+        </div>
+
+    </section>
+
+</BaseLayout>

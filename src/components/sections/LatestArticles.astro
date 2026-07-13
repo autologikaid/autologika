@@ -1,6 +1,8 @@
 ---
 import "../../styles/sections/latest-articles.css";
 import SectionTitle from "../ui/SectionTitle.astro";
+import { articles } from "../../data/articles";
+const latest = articles[0];
 ---
 
 <section class="latest-articles section">
@@ -18,10 +20,14 @@ href="/article"
         <div class="article-featured">
 
             <div class="article-image">
+                
+                <img
+                src={latest.thumbnail}
+                alt={latest.title}
+                
+                />
 
-                📰
-
-            </div>
+</div>
 
             <div class="article-content">
 
@@ -30,16 +36,16 @@ href="/article"
                 </span>
 
                 <h3>
-                    Artikel AutoLogika
+                    {latest.title}
                 </h3>
 
                 <p>
-
-                    Sedang Dalam Pengembangan.
-
+                    {latest.excerpt}
                 </p>
 
-                <a href="/article" class="btn">
+                <a
+                href={`/article/${latest.slug}`}
+                class="btn">
                 Baca Artikel
             </a>
 

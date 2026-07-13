@@ -1,0 +1,156 @@
+---
+interface Item{
+    id:string;
+    title:string;
+}
+
+interface Props{
+    items:Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="toc">
+
+<div class="toc-title">
+    📑 Daftar Isi
+</div>
+
+<ul class="toc-list">
+
+{
+items.map((item,index)=>(
+<li>
+
+<a href={`#${item.id}`}>
+
+<span class="number">
+{String(index+1).padStart(2,"0")}
+</span>
+
+<span class="title">
+{item.title}
+</span>
+
+</a>
+
+</li>
+))
+}
+
+</ul>
+
+</nav>
+
+<style>
+
+.toc{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:20px;
+
+margin:40px 0;
+
+box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+}
+
+.toc-title{
+
+font-size:1.4rem;
+
+font-weight:700;
+
+color:#111;
+
+margin-bottom:22px;
+
+padding:100;
+
+}
+
+.toc-list{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:12px 32px;
+
+}
+
+.toc-list li{
+
+margin:0;
+
+}
+
+.toc-list a{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:12px;
+
+text-decoration:none;
+
+color:#444;
+
+font-weight:500;
+
+line-height:1.45;
+
+transition:.2s;
+
+}
+
+.number{
+
+color:#d00000;
+
+font-weight:700;
+
+min-width:24px;
+
+}
+
+.toc a:hover{
+
+color:#d00000;
+
+}
+
+.title{
+
+flex:1;
+
+}
+
+.toc-list a:hover{
+
+color:#d00000;
+
+}
+
+@media(max-width:768px){
+
+.toc-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>

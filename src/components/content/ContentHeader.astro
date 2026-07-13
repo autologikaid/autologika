@@ -2,6 +2,11 @@
 import "../../styles/content/content-header.css";
 
 const { content } = Astro.props;
+
+const timeInfo =
+    content.duration ??
+    content.readingTime ??
+    null;
 ---
 
 <header class="content-header">
@@ -19,31 +24,25 @@ const { content } = Astro.props;
     </div>
 
     <h1>
-
         {content.title}
-
     </h1>
 
     <div class="content-info">
 
         <span>
-
             📅 {content.publishedAt}
-
         </span>
 
-        <span>
-
-            ⏱ {content.duration}
-
-        </span>
+        {timeInfo && (
+            <span>
+                ⏱ {timeInfo}
+            </span>
+        )}
 
     </div>
 
     <p class="content-description">
-
         {content.excerpt}
-
     </p>
 
 </header>

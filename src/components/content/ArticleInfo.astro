@@ -1,0 +1,67 @@
+---
+import type { Article } from "../../types/content";
+
+interface Props {
+    content: Article;
+}
+
+const { content } = Astro.props;
+---
+
+<div class="article-info">
+
+    <div class="item">
+        <span class="label">📂 Kategori</span>
+        <strong>{content.category}</strong>
+    </div>
+
+    <div class="item">
+        <span class="label">🎯 Level</span>
+        <strong>{content.level}</strong>
+    </div>
+    
+    <div class="item">
+        <span class="label">👨‍🔧 Penulis</span>
+        <strong>{content.author}</strong>
+    </div>
+
+</div>
+
+<style>
+
+.info-card{
+    width:210px;
+}
+
+.article-info{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    margin:15px 0;
+}
+
+.item{
+    background:#171a21;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    padding:18px;
+}
+
+.label{
+    display:block;
+    color:#9ca3af;
+    font-size:.85rem;
+    margin-bottom:8px;
+}
+
+.item strong{
+    color:#fff;
+}
+
+@media(max-width:768px){
+.article-info{
+    grid-template-columns:repeat(2,1fr);
+}
+}
+</style>
