@@ -170,4 +170,32 @@ status:"published",
 publishedAt:"2026-07-01",
 },
 
+{
+id:7,
+
+title:"MAF vs MAP",
+
+slug:"maf-vs-map",
+
+excerpt:"MAF vs MAP! Bedanya Ternyata Bukan Cuma Nama",
+
+description:"Kalau tugasnya sama, kenapa pabrikan tidak memakai satu jenis sensor saja? Ternyata MAF dan MAP memiliki cara kerja yang berbeda dalam membantu ECU menghitung udara yang masuk ke mesin.",
+
+category:"Sensor",
+
+level:"pemula",
+
+duration:"01:03",
+
+videoUrl:"https://www.youtube.com/embed/ODhhtcIH10o",
+
+image:"/images/videos/thumbnails/007-maf-vs-map.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-07-15",
+},
+
 ];
