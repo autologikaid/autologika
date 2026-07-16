@@ -1,6 +1,7 @@
 import type { Video } from "../types/content";
+import { sortByPublishedDate } from "../utils/sort";
 
-export const videos: Video[] = [
+const videoData: Video[] = [
 
 {
 id:1,
@@ -199,3 +200,5 @@ publishedAt:"2026-07-15",
 },
 
 ];
+
+export const videos = sortByPublishedDate(videoData);

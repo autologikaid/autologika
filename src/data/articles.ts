@@ -1,6 +1,7 @@
 import type { Article } from "../types/content";
+import { sortByPublishedDate } from "../utils/sort";
 
-export const articles: Article[] = [
+const articleData: Article[] = [
 
 {
     id: 1,
@@ -243,3 +244,5 @@ export const articles: Article[] = [
 }
 
 ];
+
+export const articles = sortByPublishedDate(articleData);

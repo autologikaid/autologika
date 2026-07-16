@@ -1,6 +1,7 @@
 import type { Diagram } from "../types/content";
+import { sortByPublishedDate } from "../utils/sort";
 
-export const diagrams: Diagram[] = [
+const diagramData: Diagram[] = [
 
 {
     id:1,
@@ -199,3 +200,5 @@ export const diagrams: Diagram[] = [
 },
 
 ];
+
+export const diagrams = sortByPublishedDate(diagramData);
