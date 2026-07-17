@@ -56,6 +56,14 @@ export interface Article extends BaseContent {
 
     keywords?:string[];
 
+    knowledgeBox?: {
+        type: "fact" | "warning" | "tip";
+        title?: string;
+        content: string;
+    };
+
     relatedDiagrams?:string[];
+
+    relatedVideos?: string[];
 
 }

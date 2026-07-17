@@ -1,0 +1,125 @@
+---
+import { videos } from "../../data/videos";
+
+interface Props {
+    slugs: string[];
+}
+
+const { slugs } = Astro.props;
+
+const related = videos.filter(video =>
+    slugs.includes(video.slug)
+);
+---
+
+<section class="related-videos">
+
+    <h2>📊 Video Terkait</h2>
+
+    <div class="video-grid">
+
+        {related.map((video) => (
+
+            <a
+                href={`/video/${video.slug}`}
+                class="video-card"
+            >
+
+                <img
+                    src={video.image}
+                    alt={video.title}
+                />
+
+                <h3>{video.title}</h3>
+
+                <p>{video.excerpt}</p>
+
+                <span>Lihat video →</span>
+
+            </a>
+
+        ))}
+
+    </div>
+
+</section>
+
+<style>
+
+.related-videos{
+
+    margin-top:70px;
+
+}
+
+.related-videos h2{
+
+    color:#fff;
+
+    margin-bottom:24px;
+
+}
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:24px;
+
+}
+
+.video-card{
+
+max-width:520px;
+
+margin:0 auto;
+
+text-align:center;
+
+}
+
+.video-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.video-card img{
+
+display:block;
+
+width:100%;
+
+max-width:320px;
+
+margin:0 auto 20px;
+
+}
+
+.video-card h3{
+
+    margin:0 0 6px;
+
+}
+
+.video-card p{
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+    line-height:1.6;
+
+}
+
+.video-card span{
+
+display:inline-block;
+
+margin-top:1px;
+
+}
+
+</style>

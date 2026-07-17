@@ -5,9 +5,11 @@ interface Props {
 
     title?: string;
 
+    content: string;
+
 }
 
-const { type, title } = Astro.props;
+const { type, title, content } = Astro.props;
 
 const config = {
 
@@ -87,7 +89,7 @@ style={`
 
 <div class="knowledge-content">
 
-<slot />
+<p>{content}</p>
 
 </div>
 

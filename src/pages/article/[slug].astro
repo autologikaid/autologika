@@ -5,6 +5,7 @@ import ContentHeader from "../../components/content/ContentHeader.astro";
 import ArticleInfo from "../../components/content/ArticleInfo.astro";
 import ArticleBody from "../../components/content/ArticleBody.astro";
 import DiagramPreview from "../../components/content/DiagramPreview.astro";
+import VideoPreview from "../../components/content/VideoPreview.astro";
 import Breadcrumb from "../../components/common/Breadcrumb.astro";
 import KnowledgeBox from "../../components/article/KnowledgeBox.astro";
 import { articles } from "../../data/articles";
@@ -70,17 +71,30 @@ image={article.image}
             
             <ArticleBody content={article} />
 
-            <KnowledgeBox type="fact">
-                
-                <p>
-                    Udara dingin memiliki massa jenis lebih tinggi dibanding udara panas. Oleh karena itu, mesin umumnya menghasilkan tenaga yang lebih baik ketika suhu udara masuk lebih rendah.
-                </p>
-            </KnowledgeBox>
+            {
+            article.knowledgeBox && (
+            
+            <KnowledgeBox
+            type={article.knowledgeBox.type}
+            title={article.knowledgeBox.title}
+            content={article.knowledgeBox.content}
+            />
+            
+            )
+            }
 
             {
             article.relatedDiagrams && (
             <DiagramPreview
             slugs={article.relatedDiagrams}
+            />
+            )
+            }
+
+            {
+            article.relatedVideos && (
+            <VideoPreview
+            slugs={article.relatedVideos}
             />
             )
             }

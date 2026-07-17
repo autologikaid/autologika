@@ -199,6 +199,34 @@ status:"published",
 publishedAt:"2026-07-15",
 },
 
+{
+id:8,
+
+title:"Sensor MAF Kotor?",
+
+slug:"sensor-maf-kotor",
+
+excerpt:"Mobil loyo? bisa jadi sensor MAF kotor",
+
+description:"Sensor MAF (Mass Air Flow Sensor) berfungsi mengukur jumlah udara yang masuk ke mesin. Namun seiring waktu, sensor ini bisa kotor akibat debu, uap oli dari sistem PCV, filter udara yang buruk, atau lingkungan yang berdebu.",
+
+category:"Sensor",
+
+level:"pemula",
+
+duration:"01:35",
+
+videoUrl:"https://www.youtube.com/embed/W13_BszvM38",
+
+image:"/images/videos/thumbnails/008-sensor-maf-kotor.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-07-17",
+},
+
 ];
 
 export const videos = sortByPublishedDate(videoData);

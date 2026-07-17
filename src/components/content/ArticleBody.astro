@@ -111,19 +111,21 @@ const { content } = Astro.props;
 
 .article-body figure{
 
-text-align:center;
+    margin:36px auto;
 
-margin:10px auto;
+    text-align:center;
 
 }
 
 .article-body figcaption{
 
-margin-top:12px;
+    margin-top:12px;
 
-font-size:.7rem;
+    font-size:.9rem;
 
-color:#777;
+    color:#666;
+
+    font-style:italic;
 
 }
 
@@ -162,6 +164,22 @@ color:#777;
     cursor:pointer;
 
     transition:.25s;
+
+}
+
+.article-body figure.article-diagram img{
+
+    width:100%;
+
+    max-width:760px;
+
+    height:auto;
+
+    display:block;
+
+    margin:24px auto;
+
+    border-radius:18px;
 
 }
 
@@ -210,6 +228,94 @@ color:#777;
     font-size:.68rem;
 
 }
+
+}
+
+/* ========================================
+   TABEL ARTIKEL
+======================================== */
+
+.article-body table{
+    width:100%;
+    margin:40px 0;
+    border-collapse:separate;
+    border-spacing:0;
+    overflow:hidden;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+}
+
+.article-body thead{
+    background:var(--primary);
+    color:#fff;
+}
+
+.article-body th{
+    padding:16px 20px;
+    text-align:left;
+    font-weight:700;
+    font-size:1rem;
+}
+
+.article-body td{
+    padding:16px 20px;
+    border-top:1px solid #ececec;
+    vertical-align:top;
+    line-height:1.8;
+}
+
+.article-body tr td:first-child,
+.article-body tr th:first-child{
+    border-right:1px solid #ececec;
+}
+
+.article-body tbody tr:nth-child(even){
+    background:#fafafa;
+}
+
+.article-body table strong{
+    color:#111;
+}
+
+@media(max-width:768px){
+
+.article-body table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+}
+
+/* ========================================
+   AUTOLOGIKA NOTE
+======================================== */
+
+.article-body blockquote{
+
+    margin:36px 0;
+
+    padding:20px 24px;
+
+    background:#fff8f8;
+
+    border-left:5px solid var(--primary);
+
+    border-radius:0 12px 12px 0;
+
+    color:#444;
+
+    line-height:1.8;
+
+}
+
+.article-body blockquote strong{
+
+    color:var(--primary);
+
+    font-size:1rem;
 
 }
 
