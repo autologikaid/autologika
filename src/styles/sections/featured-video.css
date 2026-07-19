@@ -4,12 +4,6 @@
 
 }
 
-.section-header a:hover{
-
-    color:var(--primary-hover);
-
-}
-
 .video-grid{
 
     display:grid;
@@ -18,13 +12,19 @@
 
     gap:25px;
 
-    align-items:start;
-
 }
 
 .video-grid > *{
 
     min-width:0;
+
+    height:100%;
+
+}
+
+.section-header a:hover{
+
+    color:var(--primary-hover);
 
 }
 

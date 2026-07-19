@@ -1,5 +1,7 @@
 ---
 import "../../styles/content/content-header.css";
+import CategoryBadge from "../ui/CategoryBadge.astro";
+import LevelBadge from "../ui/LevelBadge.astro";
 
 const { content } = Astro.props;
 
@@ -13,13 +15,25 @@ const timeInfo =
 
     <div class="content-meta">
 
-        <span class="badge">
-            {content.category}
-        </span>
+        <div class="category-list">
 
-        <span class="badge">
-            {content.level}
-        </span>
+            {
+
+                content.categories.map((category:string)=>(
+
+                    <CategoryBadge
+                        category={category}
+                    />
+
+                ))
+
+            }
+
+        </div>
+
+        <LevelBadge
+        level={content.level}
+/>
 
     </div>
 
@@ -33,16 +47,26 @@ const timeInfo =
             📅 {content.publishedAt}
         </span>
 
-        {timeInfo && (
-            <span>
-                ⏱ {timeInfo}
-            </span>
-        )}
+        {
+
+            timeInfo && (
+
+                <span>
+
+                    ⏱ {timeInfo}
+
+                </span>
+
+            )
+
+        }
 
     </div>
 
     <p class="content-description">
+
         {content.excerpt}
+
     </p>
 
 </header>

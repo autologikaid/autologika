@@ -1,0 +1,33 @@
+---
+import "../../styles/ui/level-badge.css";
+import { getLevelStyle } from "../../utils/level";
+
+interface Props{
+
+    level:string;
+
+}
+
+const { level } = Astro.props as Props;
+
+const style = getLevelStyle(level);
+
+---
+
+<span
+
+class="level-badge"
+
+style={`--level-color:${style.color};`}
+
+>
+
+<span class="level-dot"></span>
+
+<span>
+
+    {level}
+
+</span>
+
+</span>

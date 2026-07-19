@@ -1,0 +1,27 @@
+---
+import { getCategoryStyle } from "../../utils/category";
+import "../../styles/ui/category-badge.css";
+
+interface Props{
+    category:string;
+}
+
+const { category } = Astro.props as Props;
+
+const style = getCategoryStyle(category);
+---
+
+<span
+    class="category-badge"
+    style={`--category-color:${style.color};`}
+>
+
+    <span class="category-icon">
+        {style.icon}
+    </span>
+
+    <span>
+        {category}
+    </span>
+
+</span>

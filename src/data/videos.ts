@@ -14,9 +14,11 @@ excerpt:"Ternyata Ban Mobil Tidak Terlahir Berwarna Hitam! Ini Alasannya.",
 
 description:"Tahukah kamu kalau karet alami sebenarnya bukan berwarna hitam? Warna hitam pada ban bukan sekadar untuk tampilan, tetapi berasal dari bahan bernama carbon black yang membuat ban lebih kuat, lebih tahan panas, lebih tahan aus",
 
-category:"Undercarriage",
+categories: [
+    "Undercarriage"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"00:34",
 
@@ -42,9 +44,12 @@ excerpt:"Apakah Oli Mahal Selalu Lebih Bagus? Ini Faktanya!",
 
 description:"Oli yang tepat akan melindungi mesin secara optimal, sedangkan oli yang tidak sesuai justru bisa mengurangi performa pelumasan pada kondisi tertentu, meskipun harganya lebih mahal.",
 
-category:"Engine",
+categories: [
+    "Lubrication",
+    "Engine"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"01:01",
 
@@ -70,9 +75,11 @@ excerpt:"Kenapa Mesin Mobil Bisa Knocking? Ini Penyebab dan Cara Mencegahnya",
 
 description:"Banyak orang mengira itu hal biasa, padahal suara tersebut bisa menjadi tanda knocking, yaitu pembakaran yang terjadi tidak normal di dalam ruang bakar.",
 
-category:"Engine",
+categories: [
+    "Engine"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"01:10",
 
@@ -98,9 +105,12 @@ excerpt:"Penyebab Mobil Loyo Ternyata Bisa dari Sensor Ini",
 
 description:"Banyak orang mengira sensor IAT hanyalah sensor biasa. Padahal, data dari sensor ini digunakan ECU untuk menghitung campuran udara dan bahan bakar agar pembakaran tetap optimal.",
 
-category:"Sensor",
+categories: [
+    "Sensor",
+    "Air Intake"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"01:03",
 
@@ -126,9 +136,11 @@ excerpt:"ECU Dibohongi! Ini yang Terjadi Kalau Menerima Data yang Salah! 😱",
 
 description:"ECU mengatur kerja mesin berdasarkan data dari berbagai sensor. Jika salah satu sensor mengirimkan data yang keliru, ECU juga bisa mengambil keputusan yang tidak tepat.",
 
-category:"ECU",
+categories: [
+    "ECU"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"01:09",
 
@@ -154,9 +166,12 @@ excerpt:"Kenapa Throttle Body Kotor Membuat Idle Tidak Stabil? Ini Penjelasan Il
 
 description:"🚗 RPM mobil naik turun saat langsam? Mesin terasa bergetar ketika berhenti di lampu merah? salah satu penyebab yang sering terlewat adalah throttle body yang kotor.",
 
-category:"Air Intake",
+categories: [
+    "Air Intake",
+    "Engine"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"01:23",
 
@@ -182,9 +197,12 @@ excerpt:"MAF vs MAP! Bedanya Ternyata Bukan Cuma Nama",
 
 description:"Kalau tugasnya sama, kenapa pabrikan tidak memakai satu jenis sensor saja? Ternyata MAF dan MAP memiliki cara kerja yang berbeda dalam membantu ECU menghitung udara yang masuk ke mesin.",
 
-category:"Sensor",
+categories: [
+    "Sensor",
+    "Air Intake"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"01:03",
 
@@ -210,9 +228,12 @@ excerpt:"Mobil loyo? bisa jadi sensor MAF kotor",
 
 description:"Sensor MAF (Mass Air Flow Sensor) berfungsi mengukur jumlah udara yang masuk ke mesin. Namun seiring waktu, sensor ini bisa kotor akibat debu, uap oli dari sistem PCV, filter udara yang buruk, atau lingkungan yang berdebu.",
 
-category:"Sensor",
+categories: [
+    "Sensor",
+    "Air Intake"
+],
 
-level:"pemula",
+level:"Pemula",
 
 duration:"01:35",
 

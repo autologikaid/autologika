@@ -10,9 +10,9 @@ export interface BaseContent {
 
     excerpt:string;
 
-    category:string;
+    categories:string[];
 
-    level:string;
+    level: "Pemula" | "Menengah" | "Lanjutan";
 
     image:string;
 

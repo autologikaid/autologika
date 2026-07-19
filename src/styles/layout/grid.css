@@ -1,0 +1,31 @@
+/* ==========================================================
+   CONTENT GRID (Listing Page)
+========================================================== */
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+}
+
+.content-grid > *{
+
+    min-width:0;
+
+    height:100%;
+
+}
+
+@media(max-width:768px){
+
+    .content-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

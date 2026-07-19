@@ -14,7 +14,9 @@ const diagramData: Diagram[] = [
 
     description:"Diagram visual ini menjelaskan mengenai perjalanan udara dari luar sampai ke dalam sistem pembakaran.",
 
-    category:"Air Intake",
+    categories: [
+        "Air Intake"
+    ],
 
     level:"Pemula",
 
@@ -38,11 +40,13 @@ const diagramData: Diagram[] = [
 
     slug:"mesin-knocking",
 
-    excerpt:"Penjelasan dan penyebab mesin Knocking",
+    excerpt:"Penjelasan dan penyebab kenapa mesin mengalami 'Knocking'",
 
     description:"Diagram ini menjelaskan kenapa mesin mobil bisa mengalami Knocking dan apa penyebabnya",
 
-    category:"Engine",
+    categories: [
+        "Engine"
+    ],
 
     level:"Pemula",
 
@@ -70,7 +74,10 @@ const diagramData: Diagram[] = [
 
     description:"Infografis ini menjelaskan apa itu sensor IAT dan kegunaannya, serta efek yang di timbulkan apabila sensor IAT rusak",
 
-    category:"Sensor",
+    categories: [
+        "Sensor",
+        "Air Intake"
+    ],
 
     level:"Pemula",
 
@@ -98,7 +105,10 @@ const diagramData: Diagram[] = [
 
     description:"Komponen ini bekerja layaknya pintu udara yang mengatur seberapa banyak udara boleh masuk ke mesin.",
 
-    category:"Air Intake",
+    categories: [
+        "Air Intake",
+        "Engine"
+    ],
 
     level:"Pemula",
 
@@ -122,11 +132,14 @@ const diagramData: Diagram[] = [
 
     slug:"maf-vs-map",
 
-    excerpt:"Perbedaan Sensor MAF dengan Sensor MAP",
+    excerpt:"Perbedaan sensor MAF dengan sensor MAP",
 
     description:"Jangan Asal Ganti Sensor! Kenali Dulu Bedanya MAF dan MAP. Masih bingung membedakan sensor MAF dan MAP? Di diagram ini saya menjelaskan dengan sederhana",
 
-    category:"Sensor",
+    categories: [
+        "Sensor",
+        "Air Intake"
+    ],
 
     level:"Pemula",
 
@@ -150,11 +163,13 @@ const diagramData: Diagram[] = [
 
     slug:"filter-udara-kotor",
 
-    excerpt:"Berikut Dampak dari Filter Udara yang Kotor",
+    excerpt:"Berikut dampak dari filter udara yang kotor",
 
     description:"Ketika filter udara mulai tersumbat, aliran udara ke mesin ikut berkurang. Akibatnya pembakaran tidak lagi optimal. Pahami resikonya melalui penjelasan di diagram berikut.",
 
-    category:"Air Intake",
+    categories: [
+        "Air Intake",
+    ],
 
     level:"Pemula",
 
@@ -178,11 +193,14 @@ const diagramData: Diagram[] = [
 
     slug:"sensor-maf-kotor",
 
-    excerpt:"Berikut Penyebab dari Sensor MAF yang Kotor di Kendaraan Anda",
+    excerpt:"Berikut penyebab dari sensor MAF yang kotor di kendaraan anda",
 
     description:"Sensor MAF yang kotor berpengaruh terhadap tarikan mesin anda. Ketahui penyebab dan gejalanya melalui diagram berikut.",
 
-    category:"Sensor",
+    categories: [
+        "Sensor",
+        "Air Intake"
+    ],
 
     level:"Pemula",
 
@@ -197,6 +215,37 @@ const diagramData: Diagram[] = [
     publishedAt:"2026-07-07",
 
     diagramNumber:7,
+},
+
+{
+    id:8,
+
+    title:"Cara Bersihkan Sensor MAF",
+
+    slug:"cara-bersihkan-sensor-maf",
+
+    excerpt:"Berikut cara membersihkan sensor MAF yang benar",
+
+    description:"Banyak pemilik mobil mengira membersihkan sensor MAF cukup dengan menyemprot cairan pembersih. Padahal, ada beberapa kesalahan kecil yang justru bisa merusak elemen sensor yang sangat sensitif.",
+
+    categories: [
+        "Sensor",
+        "Air Intake"
+    ],
+
+    level:"Pemula",
+
+    thumbnail:"/images/diagrams/thumbnails/T008-bersihkan-maf.webp",
+
+    image:"/images/diagrams/pictures/P008-bersihkan-maf.webp",
+
+    featured:true,
+
+    status:"published",
+
+    publishedAt:"2026-07-18",
+
+    diagramNumber:8,
 },
 
 ];

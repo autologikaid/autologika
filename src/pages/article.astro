@@ -3,6 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeader from "../components/ui/PageHeader.astro";
 import Navbar from "../components/sections/Navbar.astro";
 import { articles } from "../data/articles";
+import CategoryBadge from "../components/ui/CategoryBadge.astro";
+import "../styles/layout/grid.css";
 ---
 
 <BaseLayout title="Artikel | AutoLogika">
@@ -36,11 +38,21 @@ alt={article.title}
 
 <div class="content">
 
-<span class="category">
+<div class="category-list">
 
-{article.category}
+    {
 
-</span>
+        article.categories.map((category: string) => (
+
+            <CategoryBadge
+                category={category}
+            />
+
+        ))
+
+    }
+
+</div>
 
 <h2>
 
@@ -173,21 +185,15 @@ line-height:1.8;
 
 }
 
-.category{
+.category-list{
 
-display:inline-block;
+display:flex;
 
-padding:6px 12px;
+flex-wrap:wrap;
 
-background:#ffe7e7;
+gap:8px;
 
-border-radius:999px;
-
-font-size:.85rem;
-
-color:#d00000;
-
-font-weight:700;
+margin-bottom:14px;
 
 }
 

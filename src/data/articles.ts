@@ -14,7 +14,9 @@ const articleData: Article[] = [
 
     description: "Artikel lengkap mengenai sistem air intake mobil mulai dari filter udara, sensor MAF, throttle body hingga intake manifold.",
 
-    category: "Air Intake",
+    categories: [
+        "Air Intake"
+    ],
 
     level: "Pemula",
 
@@ -289,7 +291,10 @@ const articleData: Article[] = [
     description:
     "Panduan lengkap mengenai throttle body mobil, mulai dari fungsi, komponen, cara kerja, gejala kerusakan, hingga perawatannya.",
 
-    category: "Air Intake",
+    categories: [
+        "Air Intake",
+        "Engine"
+    ],
 
     level: "Pemula",
 

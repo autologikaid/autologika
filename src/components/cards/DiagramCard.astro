@@ -1,5 +1,6 @@
 ---
 import Card from "../ui/Card.astro";
+import CategoryBadge from "../ui/CategoryBadge.astro";
 import "../../styles/cards/diagram-card.css";
 
 const {
@@ -7,6 +8,7 @@ const {
     description,
     thumbnail,
     diagramNumber,
+    categories = [],
     href = "#",
 } = Astro.props;
 ---
@@ -24,15 +26,29 @@ const {
 
     <div class="diagram-card-body">
 
-        <span class="diagram-number">
+        <div class="category-list">
 
-            Diagram #{diagramNumber}
+        {
+            categories.map((category: string) => (
+
+                <CategoryBadge category={category} />
+
+            ))
+        }
+
+    </div>
+
+        <span class="diagram-number">
+            
+            📘 Diagram #{diagramNumber}
 
         </span>
 
         <h3>{title}</h3>
 
-        <p>{description}</p>
+        <p class="diagram-description">
+            {description}
+        </p>
 
         <a href={href} class="diagram-link">
 

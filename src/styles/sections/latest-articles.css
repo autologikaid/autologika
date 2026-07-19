@@ -96,4 +96,16 @@ font-size:1.6rem;
 
 }
 
+.category-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:16px;
+
+}
+
 }

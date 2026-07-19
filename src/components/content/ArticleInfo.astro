@@ -1,5 +1,6 @@
 ---
 import type { Article } from "../../types/content";
+import CategoryBadge from "../ui/CategoryBadge.astro";
 
 interface Props {
     content: Article;
@@ -11,9 +12,22 @@ const { content } = Astro.props;
 <div class="article-info">
 
     <div class="item">
-        <span class="label">📂 Kategori</span>
-        <strong>{content.category}</strong>
+        
+        <span class="label">
+            📂 Kategori
+        </span>
+
+        <div class="category-list">
+            
+            {
+            content.categories.map((category: string) => (
+            <CategoryBadge category={category} />
+            ))
+            }
+        
     </div>
+
+</div>
 
     <div class="item">
         <span class="label">🎯 Level</span>
@@ -57,6 +71,18 @@ const { content } = Astro.props;
 
 .item strong{
     color:#fff;
+}
+
+.category-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-top:8px;
+
 }
 
 @media(max-width:768px){

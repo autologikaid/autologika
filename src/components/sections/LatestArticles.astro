@@ -2,6 +2,7 @@
 import "../../styles/sections/latest-articles.css";
 import SectionTitle from "../ui/SectionTitle.astro";
 import { articles } from "../../data/articles";
+import CategoryBadge from "../ui/CategoryBadge.astro";
 const latest =
     articles.find(article => article.featured)
     ?? articles
@@ -39,9 +40,17 @@ href="/article"
 
             <div class="article-content">
 
-                <span class="category">
-                    EDUKASI
-                </span>
+                <div class="category-list">
+                    
+                    {
+                    latest.categories.map((category: string) => (
+                        <CategoryBadge
+                            category={category}
+                        />
+                    ))
+                    }
+                    
+                </div>
 
                 <h3>
                     {latest.title}

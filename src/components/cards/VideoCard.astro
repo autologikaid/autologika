@@ -1,43 +1,58 @@
 ---
 import Card from "../ui/Card.astro";
-import Badge from "../ui/Badge.astro";
 import Thumbnail from "../ui/Thumbnail.astro";
 import "../../styles/cards/video-card.css";
+import { getCategoryStyle } from "../../utils/category";
+import type { Video } from "../../types/content";
+import CategoryBadge from "../ui/CategoryBadge.astro";
 
 const {
     title,
     description,
     duration,
-    category,
+    categories,
     image,
-    href = "#",
-    slug = "",
-} = Astro.props;
+    slug,
+} = Astro.props as Video;
 
-const url = slug ? `/video/${slug}` : href;
+const url = `/video/${slug}`;
 ---
 
 <Card>
 
     <Thumbnail
-    image={image}
-    alt={title}
-    duration={duration}
-    href={url}
+        image={image}
+        alt={title}
+        duration={duration}
+        href={url}
     />
 
     <div class="video-card-body">
 
+        <div class="video-category-list">
+
+            {
+                categories.map((category: string) => (
+
+                    <CategoryBadge
+                        category={category}
+                    />
+
+                ))
+            }
+
+        </div>
+
         <h3>{title}</h3>
-        
-        <Badge size="sm" variant="secondary">
-            🏷 {category}
-        </Badge>
+
         <p class="video-description">
             {description}
         </p>
 
-        <a href={url} class="video-link">
+        <a
+            href={url}
+            class="video-link"
+        >
             <span>Tonton Sekarang</span>
             <span class="arrow">→</span>
         </a>

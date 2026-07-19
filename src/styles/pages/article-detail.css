@@ -14,19 +14,15 @@ margin-bottom:50px;
 
 }
 
-.article-category{
+.category-list{
 
-display:inline-block;
+display:flex;
 
-background:#c1121f;
+flex-wrap:wrap;
 
-padding:6px 14px;
+gap:8px;
 
-border-radius:999px;
-
-font-size:.85rem;
-
-margin-bottom:15px;
+margin-bottom:18px;
 
 }
 
