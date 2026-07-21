@@ -248,6 +248,37 @@ status:"published",
 publishedAt:"2026-07-17",
 },
 
+{
+id:9,
+
+title:"Bersihkan Sensor MAF",
+
+slug:"bersihkan-sensor-maf",
+
+excerpt:"🚨 Jangan asal semprot! Satu kesalahan kecil saat membersihkan sensor MAF bisa membuat sensor rusak",
+
+description:"Banyak pemilik mobil mengira membersihkan sensor MAF cukup dengan menyemprot cairan Cleaner, padahal ada langkah-langkah penting yang harus dilakukan agar elemen sensor yang sangat sensitif tetap aman.",
+
+categories: [
+    "Sensor",
+    "Air Intake"
+],
+
+level:"Pemula",
+
+duration:"01:43",
+
+videoUrl:"https://www.youtube.com/embed/5wLMX6qsl6o",
+
+image:"/images/videos/thumbnails/009-bersihkan-maf.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-07-20",
+},
+
 ];
 
 export const videos = sortByPublishedDate(videoData);

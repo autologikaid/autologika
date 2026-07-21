@@ -248,6 +248,37 @@ const diagramData: Diagram[] = [
     diagramNumber:8,
 },
 
+{
+    id:9,
+
+    title:"Memilih Filter Udara Yang Tepat",
+
+    slug:"memilih-filter-udara",
+
+    excerpt:"Semua filter udara memang terlihat mirip. Tapi, apakah semuanya benar-benar cocok untuk mobilmu?",
+
+    description:"Memilih filter udara bukan hanya soal ukuran atau harga. Filter yang berkualitas berperan penting dalam menyaring debu sebelum udara masuk ke mesin. Jika salah memilih, debu bisa lebih mudah lolos dan mempercepat keausan komponen mesin.",
+
+    categories: [
+        "Sensor",
+        "Air Intake"
+    ],
+
+    level:"Pemula",
+
+    thumbnail:"/images/diagrams/thumbnails/P009-memilih-filter-udara.webp",
+
+    image:"/images/diagrams/pictures/T009-memilih-filter-udara.webp",
+
+    featured:true,
+
+    status:"published",
+
+    publishedAt:"2026-07-21",
+
+    diagramNumber:9,
+},
+
 ];
 
 export const diagrams = sortByPublishedDate(diagramData);
