@@ -266,9 +266,9 @@ const diagramData: Diagram[] = [
 
     level:"Pemula",
 
-    thumbnail:"/images/diagrams/thumbnails/P009-memilih-filter-udara.webp",
+    thumbnail:"/images/diagrams/thumbnails/T009-memilih-filter-udara.webp",
 
-    image:"/images/diagrams/pictures/T009-memilih-filter-udara.webp",
+    image:"/images/diagrams/pictures/P009-memilih-filter-udara.webp",
 
     featured:true,
 
