@@ -260,7 +260,6 @@ const diagramData: Diagram[] = [
     description:"Memilih filter udara bukan hanya soal ukuran atau harga. Filter yang berkualitas berperan penting dalam menyaring debu sebelum udara masuk ke mesin. Jika salah memilih, debu bisa lebih mudah lolos dan mempercepat keausan komponen mesin.",
 
     categories: [
-        "Sensor",
         "Air Intake"
     ],
 
