@@ -1,0 +1,127 @@
+---
+import { articles } from "../../data/articles";
+
+interface Props {
+    slugs: string[];
+}
+
+const { slugs } = Astro.props;
+
+const related = articles.filter(article =>
+    slugs.includes(article.slug)
+);
+---
+
+<section class="related-articles">
+
+    <h2>📚 Artikel Terkait</h2>
+
+    <div class="article-grid">
+
+        {related.map((article) => (
+
+            <a
+                href={`/article/${article.slug}`}
+                class="article-card"
+            >
+
+                <img
+                    src={article.thumbnail}
+                    alt={article.title}
+                />
+
+                <h3>{article.title}</h3>
+
+                <p>{article.excerpt}</p>
+
+                <span>Baca artikel →</span>
+
+            </a>
+
+        ))}
+
+    </div>
+
+</section>
+
+<style>
+
+.related-articles{
+
+    margin-top:70px;
+
+}
+
+.related-articles h2{
+
+    color:#fff;
+
+    margin-bottom:24px;
+
+}
+
+.article-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:24px;
+
+}
+
+.article-card{
+
+    max-width:520px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    text-decoration:none;
+
+}
+
+.article-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.article-card img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:320px;
+
+    margin:0 auto 20px;
+
+}
+
+.article-card h3{
+
+    margin:0 0 6px;
+
+}
+
+.article-card p{
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+    line-height:1.6;
+
+}
+
+.article-card span{
+
+    display:inline-block;
+
+    margin-top:1px;
+
+}
+
+</style>

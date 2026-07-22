@@ -4,10 +4,11 @@ import Navbar from "../../components/sections/Navbar.astro";
 import ContentHeader from "../../components/content/ContentHeader.astro";
 import ArticleInfo from "../../components/content/ArticleInfo.astro";
 import ArticleBody from "../../components/content/ArticleBody.astro";
-import DiagramPreview from "../../components/content/DiagramPreview.astro";
-import VideoPreview from "../../components/content/VideoPreview.astro";
 import Breadcrumb from "../../components/common/Breadcrumb.astro";
 import KnowledgeBox from "../../components/article/KnowledgeBox.astro";
+import ArticlePreview from "../../components/content/ArticlePreview.astro";
+import DiagramPreview from "../../components/content/DiagramPreview.astro";
+import VideoPreview from "../../components/content/VideoPreview.astro";
 import { articles } from "../../data/articles";
 export function getStaticPaths() {
 
@@ -80,6 +81,14 @@ image={article.image}
             content={article.knowledgeBox.content}
             />
             
+            )
+            }
+
+            {
+            article.relatedArticles && (
+            <ArticlePreview
+            slugs={article.relatedArticles}
+            />
             )
             }
 

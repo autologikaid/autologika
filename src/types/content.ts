@@ -62,6 +62,8 @@ export interface Article extends BaseContent {
         content: string;
     };
 
+    relatedArticles?: string[];
+
     relatedDiagrams?:string[];
 
     relatedVideos?: string[];

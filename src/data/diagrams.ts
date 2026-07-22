@@ -255,7 +255,7 @@ const diagramData: Diagram[] = [
 
     slug:"memilih-filter-udara",
 
-    excerpt:"Semua filter udara memang terlihat mirip. Tapi, apakah semuanya benar-benar cocok untuk mobilmu?",
+    excerpt:"Beberapa filter udara memang terlihat mirip. Tapi, apakah semuanya benar-benar cocok untuk mobilmu?",
 
     description:"Memilih filter udara bukan hanya soal ukuran atau harga. Filter yang berkualitas berperan penting dalam menyaring debu sebelum udara masuk ke mesin. Jika salah memilih, debu bisa lebih mudah lolos dan mempercepat keausan komponen mesin.",
 
