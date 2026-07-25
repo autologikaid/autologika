@@ -327,7 +327,7 @@ export const filterUdaraMobilArticle: Article = {
     Secara umum, filter udara yang tersedia di pasaran dapat dibedakan menjadi filter standar (OEM atau setara OEM) dan filter performa yang dapat dibersihkan (<em>reusable performance air filter</em>). Masing-masing memiliki karakteristik serta cara perawatan yang berbeda.
     </p>
 
-    <h4>1. Filter Standar (OEM atau Setara OEM)</h4>
+    <h4>1. Filter Standar (OEM atau Aftermarket Setara OEM)</h4>
     
     <p>
     Filter standar merupakan jenis filter yang paling umum digunakan pada kendaraan produksi massal. Media penyaringnya biasanya menggunakan kertas atau serat sintetis dan dirancang untuk penggunaan harian. Setelah mencapai batas masa pakainya, filter diganti dengan unit yang baru.

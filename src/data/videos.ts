@@ -279,6 +279,36 @@ status:"published",
 publishedAt:"2026-07-20",
 },
 
+{
+id:10,
+
+title:"Memilih Filter Udara",
+
+slug:"memilih-filter-udara",
+
+excerpt:"Jangan sampai salah pilih filter udara! Karena bisa mempengaruhi cara mesin <em>bernapas</em>. 🚗",
+
+description:"Filter udara bukan cuma aksesori yang diganti saat servis. Komponen ini bertugas menyaring udara sebelum masuk ke mesin. Di video ini kita bahas perbedaan karakter filter OEM dan filter performa secara sederhana agar kamu bisa memilih sesuai kebutuhan.",
+
+categories: [
+    "Air Intake"
+],
+
+level:"Pemula",
+
+duration:"01:03",
+
+videoUrl:"https://www.youtube.com/embed/Qac_LeU1hAM",
+
+image:"/images/videos/thumbnails/010-memilih-filter.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-07-25",
+},
+
 ];
 
 export const videos = sortByPublishedDate(videoData);
