@@ -300,7 +300,7 @@ duration:"01:03",
 
 videoUrl:"https://www.youtube.com/embed/Qac_LeU1hAM",
 
-image:"/images/videos/thumbnails/010-memilih-filter.webp",
+image:"/images/videos/thumbnails/011-memilih-filter.webp",
 
 featured:true,
 
