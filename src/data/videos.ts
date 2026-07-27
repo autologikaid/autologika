@@ -300,13 +300,43 @@ duration:"01:03",
 
 videoUrl:"https://www.youtube.com/embed/Qac_LeU1hAM",
 
-image:"/images/videos/thumbnails/011-memilih-filter.webp",
+image:"/images/videos/thumbnails/010-memilih-filter.webp",
 
 featured:true,
 
 status:"published",
 
 publishedAt:"2026-07-25",
+},
+
+{
+id:11,
+
+title:"Dampak Filter Udara Kotor",
+
+slug:"dampak-filter-udara-kotor",
+
+excerpt:"🚗 Tenaga mobil terasa loyo? Jangan langsung menyalahkan mesin!. 🚗",
+
+description:"Filter udara yang kotor dapat menghambat aliran udara ke mesin sehingga proses pembakaran menjadi kurang optimal. Akibatnya, performa bisa menurun, konsumsi bahan bakar berpotensi meningkat, dan sensor MAF dapat lebih cepat kotor.",
+
+categories: [
+    "Air Intake"
+],
+
+level:"Pemula",
+
+duration:"01:02",
+
+videoUrl:"https://www.youtube.com/embed/EFxPmEah6BQ",
+
+image:"/images/videos/thumbnails/011-dampak-filter-kotor.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-07-27",
 },
 
 ];
