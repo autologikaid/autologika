@@ -278,6 +278,36 @@ const diagramData: Diagram[] = [
     diagramNumber:9,
 },
 
+{
+    id:10,
+
+    title:"Apa Itu Katup PCV?",
+
+    slug:"apa-itu-katup-pcv",
+
+    excerpt:"😱 Knalpot Keluar Asap Putih? Jangan Langsung Vonis Turun Mesin!",
+
+    description:"Banyak pemilik mobil langsung panik saat melihat asap keluar dari knalpot. Padahal, salah satu penyebab yang sering terlewat adalah katup PCV (Positive Crankcase Ventilation) yang mulai bermasalah.",
+
+    categories: [
+        "Air Intake"
+    ],
+
+    level:"Pemula",
+
+    thumbnail:"/images/diagrams/thumbnails/T010-apa-itu-pcv.webp",
+
+    image:"/images/diagrams/pictures/P010-apa-itu-pcv.webp",
+
+    featured:true,
+
+    status:"published",
+
+    publishedAt:"2026-07-30",
+
+    diagramNumber:10,
+},
+
 ];
 
 export const diagrams = sortByPublishedDate(diagramData);
