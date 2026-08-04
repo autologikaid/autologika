@@ -339,6 +339,36 @@ status:"published",
 publishedAt:"2026-07-27",
 },
 
+{
+id:12,
+
+title:"Apa Itu PCV Valve?",
+
+slug:"apa-itu-pcv-valve",
+
+excerpt:"🚨 Knalpot mobilmu mulai mengeluarkan asap putih tipis? Jangan langsung panik!",
+
+description:"Banyak orang langsung mengira penyebabnya ring piston aus atau harus turun mesin. Padahal, ada satu komponen kecil yang sering terlupakan : PCV Valve. Tonton videonya agar kamu paham cara kerjanya",
+
+categories: [
+    "Air Intake"
+],
+
+level:"Pemula",
+
+duration:"01:34",
+
+videoUrl:"https://www.youtube.com/embed/9S_efONqnVk",
+
+image:"/images/videos/thumbnails/012-apa-itu-pcv.webp",
+
+featured:true,
+
+status:"published",
+
+publishedAt:"2026-08-04",
+},
+
 ];
 
 export const videos = sortByPublishedDate(videoData);
