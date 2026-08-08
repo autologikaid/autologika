@@ -308,6 +308,36 @@ const diagramData: Diagram[] = [
     diagramNumber:10,
 },
 
+{
+    id:11,
+
+    title:"5 Gejala PCV Valve Rusak",
+
+    slug:"5-gejala-pcv-rusak",
+
+    excerpt:"Di diagram ini akan di jelaskan 5 gejala PCV Valve yang mengalami kerusakan",
+
+    description:"Kalau mobilmu mulai menunjukkan salah satu gejala berikut, bisa jadi sudah waktunya memeriksa kondisi PCV Valve. Yaitu Idle tidak stabil, Asap putih kebiruan dari knalpot, Oli mesin cepat berkurang, Oli mulai merembes atau bocor, Lampu Check Engine menyala.",
+
+    categories: [
+        "Air Intake"
+    ],
+
+    level:"Pemula",
+
+    thumbnail:"/images/diagrams/thumbnails/T010-gejala-pcv-rusak.webp",
+
+    image:"/images/diagrams/pictures/P010-gejala-pcv-rusak.webp",
+
+    featured:true,
+
+    status:"published",
+
+    publishedAt:"2026-08-06",
+
+    diagramNumber:11,
+},
+
 ];
 
 export const diagrams = sortByPublishedDate(diagramData);
