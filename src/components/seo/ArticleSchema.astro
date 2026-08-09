@@ -1,0 +1,57 @@
+---
+const { article } = Astro.props;
+
+const articleUrl = `https://autologika.id/article/${article.slug}/`;
+
+const imageUrl = article.image
+    ? new URL(article.image, "https://autologika.id").toString()
+    : undefined;
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+
+    headline: article.seoTitle ?? article.title,
+
+    description:
+        article.seoDescription ??
+        article.description,
+
+    datePublished: article.publishedAt,
+
+    ...(article.updatedAt && {
+        dateModified: article.updatedAt,
+    }),
+
+    author: {
+        "@type": "Organization",
+        name: article.author || "AutoLogika.id",
+    },
+
+    publisher: {
+        "@type": "Organization",
+        name: "AutoLogika.id",
+
+        logo: {
+            "@type": "ImageObject",
+            url: "https://autologika.id/logoal.webp",
+        },
+    },
+
+    ...(imageUrl && {
+        image: [imageUrl],
+    }),
+
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": articleUrl,
+    },
+
+    inLanguage: "id-ID",
+};
+---
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(schema)}
+></script>

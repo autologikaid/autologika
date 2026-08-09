@@ -34,15 +34,12 @@ const { article } = Astro.props;
 ---
 
 <BaseLayout
-
-title={article.seoTitle ?? article.title}
-
-description={article.seoDescription}
-
-image={article.image}
-
+    title={article.seoTitle ?? article.title}
+    description={article.seoDescription}
+    image={article.image}
+    type="article"
+    article={article}
 >
-
     <Navbar />
 
     <section class="section">

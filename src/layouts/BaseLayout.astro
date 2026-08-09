@@ -4,12 +4,14 @@ import "../styles/base/background.css";
 import "../styles/base/layout.css";
 import Footer from "../components/sections/Footer.astro";
 import WebsiteSchema from "../components/seo/WebsiteSchema.astro";
+import ArticleSchema from "../components/seo/ArticleSchema.astro";
 
 const {
-  title = "AutoLogika | Belajar Otomotif Modern",
-  description = "Belajar otomotif modern melalui artikel, video, dan infografis yang mudah dipahami.",
-  image = "/og-image.webp",
-  type = "website",
+    title = "AutoLogika | Belajar Otomotif Modern",
+    description = "Belajar otomotif modern melalui artikel, video, dan infografis yang mudah dipahami.",
+    image = "/og-image.webp",
+    type = "website",
+    article = null,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -35,6 +37,8 @@ const imageURL = new URL(image, Astro.site);
     <link rel="canonical" href={canonicalURL} />
 
     <WebsiteSchema />
+
+    {article && <ArticleSchema article={article} />}
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
