@@ -17,15 +17,18 @@ const schema = {
         article.seoDescription ??
         article.description,
 
-    datePublished: article.publishedAt,
+    datePublished: article.publishedAt
+        ? `${article.publishedAt}T00:00:00+07:00`
+        : undefined,
 
     ...(article.updatedAt && {
-        dateModified: article.updatedAt,
+        dateModified: `${article.updatedAt}T00:00:00+07:00`,
     }),
 
     author: {
         "@type": "Organization",
         name: article.author || "AutoLogika.id",
+        url: "https://autologika.id/",
     },
 
     publisher: {
